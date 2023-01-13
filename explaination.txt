@@ -1,4 +1,0 @@
-Goals in creating a website
-1. Define the layout.
-2. Add details (e.g text)
-3. Make this more responsive and cross-compatible with other browsers.
