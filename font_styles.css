@@ -1,0 +1,17 @@
+/*Default font style properties/settings that can be overloaded*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+code, pre {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.cursive {
+    font-family:'Apple Chancery', 'Lucida Calligraphy', cursive; 
+}
