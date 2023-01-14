@@ -1,0 +1,28 @@
+/*Override settings to make the website responsive*/
+
+img.header_logo {
+    display: none!important;
+}
+
+div.header-content {
+    float: left;
+    margin-top: 30px;
+}
+
+div.header {
+    margin-bottom: 80px;
+}
+
+.history-card {
+    margin-bottom: 50px;
+    height: auto!important;
+    width: 95%!important;
+}
+
+p#history-content {
+    float: none;
+}
+
+#wave-1 {
+    display: none;
+}

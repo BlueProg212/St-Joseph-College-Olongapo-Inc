@@ -18,7 +18,7 @@
         <link rel="manifest" href="assets/favicons/site.webmanifest">
         <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#">
     </head>
 
     <body>
@@ -29,6 +29,7 @@
                     <span class="brand name">SJCO</span>
                     <a href="#about_us" class="navbar-link">About Us</a>
                     <a href="#contact_us" class="navbar-link">Contact Us</a>
+                    <a href="#enroll" class="navbar-link">Enroll Now</a>
                 </div>
             </div>
 
@@ -37,24 +38,87 @@
                 <div class="header-content"> 
                     <h1 id="title">Welcome to<br> St. Joseph College - Olongapo Inc.</h1>
                     <h2 id="tagline">The School That Cares</h2>
-                    <button class="blue-gradient-btn">Pre-Register Now</button>
+                    
+                    <button class="blue-gradient-btn" id="register">Pre-Register Now</button>
                 </div>
             </div>
-            
+
             <div id="wave-1">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                    <path fill="#292930" fill-opacity="1" d="M0,128L80,106.7C160,85,320,43,480,48C640,53,800,107,960,122.7C1120,139,1280,117,1360,106.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-                </svg>
+                <!--For smooth transitions-->
+                <img src="assets/wave.svg" />
             </div>
 
-            <section id="history">
+            <section id="about_us">
+                <article id="vmg-article">
+                    <h1 id="vmg-title">About St. Joseph College Inc.</h1>
+                    <div id="vmg_card_container">
+                            <div class="card">
+                                <h2 class="col-title">Vision</h2>
+                                <p class="col-content">
+                                    St. Joseph College - Olongapo Inc. envisions a Christ-centered, dynamic, and effective
+                                    academic community that adheres to the Catholic philosophy of education and national
+                                    development goals.
+                                </p>
+                            </div>
+
+                            <div class="card">
+                                <h2 class="col-title">Mission</h2>
+                                <p class="col-content">
+                                    To prepare self-directed, responsible, humane, God-loving, and environment-caring
+                                    citizens and leaders who are academically and vocationally equipped to cope with 
+                                    life and to be ready to serve others.
+                                </p>
+                            </div>
+    
+                            <div class="card">
+                                <h2 class="col-title">Goals</h2>
+                                <p class="col-content">
+                                    St. Joseph College - Olongapo Inc. implements an educational program aimed to produce responsible, 
+                                    competent and productive individuals fired with Christian values.
+                                </p>
+                            </div>
+                        </div>
+                     </div>
+                </article>
+                
                 <article>
-                    <h1>History of St. Joseph College - Olongapo Inc.</h1>
+                    <h2 id="history-title">History</h2>
+                    <div class="history-card">
+                        <p id="history-content">
+                            St. Joseph College Olongapo (often abbreviated as "SJCO") is a Catholic institution 
+                            dedicated to spreading wisdom and providing education to students in Olongapo, including the neighboring
+                            towns of Zambales and Bataan.<br><br>
+
+                            It is the oldest parochial school in Olongapo City and Central Luzon, founded by
+                            Father Martin Moran, an Irish diocesan priest.<br><br>
+
+                            St. Joseph College Olongapo Inc. was officially established after World War II by 
+                            the Society of the Divine Word Fathers in <span class="bold">1945</span>.
+                            Fr. Rizalino Veneracion served as the first director.
+                        </p>
+                        <img src="assets/history_1.png" id="history_picture" />
+                    </div>
+
+                    <!--Create video with thumbnail-->
+                    <div class="video-wrapper"> 
+                        <video poster="assets/thumbnail.png" autoplay id="history_video">
+                            <source src="assets/history_of_st_joseph_college.mp4" type="video/mp4">
+                        </video>
+                        <div class="playpause"></div>
+                    </div>
                 </article>
             </section>
+
+            <div id="footer">
+                <ul id="links">
+                    <li><h3 class="category-label" id="contact_us">CONTACTS</h3></li>
+                    <li><h3 class="category-label">ADDRESS</h3></li>
+                    <li><h3 class="category-label">SOCIAL MEDIA</h3></li>
+                </ul>
+            </div>
         </main>
 
-        <!--Optimizes the webpage.-->
+        <!--Optimizes the webpage and adds functionality to elements.-->
         <script src="main.js" async defer></script> 
     </body>
 </html>
