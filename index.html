@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
     <head>
         <title>St Joseph College - Olongapo City Inc.</title>
 
-        <!--Styles the webpage-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" type="text/css" href="./scrollbar.css" />
+        <link rel="stylesheet" type="text/css" href="./font_styles.css" />
 
-        <!--Helps the search engines to categorize the website-->
-        <meta name="description" content="A School That Cares" />
+        <meta name="description" content="Competence | Moral Uprightness | Service" />
         <meta charset="UTF-8" />
 
-        <!--For PWA applications and Favicons-->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
@@ -21,7 +20,7 @@
         <meta name="theme-color" content="#">
     </head>
 
-    <body>
+    <body data-theme="dark">
         <main id="home">
             <div class="navbar" id="main_navbar">
                 <img src="./assets/logo.png" class="brand logo" alt="St_Joseph_Logo" draggable="false" />
@@ -29,26 +28,30 @@
                     <span class="brand name">SJCO</span>
                     <a href="#about_us" class="navbar-link">About Us</a>
                     <a href="#contact_us" class="navbar-link">Contact Us</a>
-                    <a href="#enroll" class="navbar-link">Enroll Now</a>
+                    <a href="https://sjc-o.lamparaschool.ph/admission/" class="navbar-link">Enroll Now</a>
+                    <a href="#clubs" class="navbar-link">Academic Offerings</a>
+                    <a href="javascript:void(0)" id="navbar_link_dropdown">☰</a>
                 </div>
             </div>
 
             <div class="header">
                 <img src="./assets/logo.png" class="header_logo fade-up" alt="St_Joseph_Logo" draggable="false" />
                 <div class="header-content"> 
-                    <h1 id="title">Welcome to<br> St. Joseph College - Olongapo Inc.</h1>
-                    <h2 id="tagline">The School That Cares</h2>
+                    <h1 id="title" class="slide-right">Welcome to<br> St. Joseph College - Olongapo Inc.</h1>
+                    <h2 id="tagline" class="fade-in">The School That Cares</h2>
                     
-                    <button class="blue-gradient-btn" id="register">Pre-Register Now</button>
+                    <a href="https://sjc-o.lamparaschool.ph/admission/">
+                        <button class="blue-gradient-btn" id="register">Pre-Register Now</button>
+                    </a>
                 </div>
             </div>
 
             <div id="wave-1">
-                <!--For smooth transitions-->
-                <img src="assets/wave.svg" />
+                <!--For smooth background transitions-->
+                <img src="assets/wave.svg" id="wave-svg" />
             </div>
 
-            <section id="about_us">
+            <section id="about_us"> 
                 <article id="vmg-article">
                     <h1 id="vmg-title">About St. Joseph College Inc.</h1>
                     <div id="vmg_card_container">
@@ -78,7 +81,7 @@
                                 </p>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </article>
                 
                 <article>
@@ -101,21 +104,86 @@
 
                     <!--Create video with thumbnail-->
                     <div class="video-wrapper"> 
-                        <video poster="assets/thumbnail.png" autoplay id="history_video">
+                        <video poster="assets/thumbnail.png" controls="controls" autoplay id="history_video">
                             <source src="assets/history_of_st_joseph_college.mp4" type="video/mp4">
                         </video>
-                        <div class="playpause"></div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="clubs">
+                <article>
+                    <h1 id="clubs-title">Extracurricular Activities</h1>
+                    <p data-font-size="20">St. Joseph College - Olongapo Inc. offers a lot of hands-on 
+                        activity. Here is a list of clubs you can join.</p>
+                    <div class="clubs-card">
+                        <div class="card">
+                            <h1 data-font-size="30">Math Club</h1>
+                            <p>Learn problem solving and how to solve equations and their real-life applications.</p>
+                        </div>
+
+                        <div class="card">
+                            <h1 data-font-size="30">Robotics</h1>
+                            <p>Learn how robots work and how to create them.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h1 data-font-size="30">AP Club</h1>
+                            <p>Expand your knowledge in geography, history, and politics.</p>
+                        </div>
+
+                        <div class="card">
+                            <h1 data-font-size="30">MAPEH Club</h1>
+                            <p>Learn how to play instruments, draw, craft, sing, and dance.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h1 data-font-size="30">English Club</h1>
+                            <p>Join this club if you enjoy reading books or if you want to expand your vocabulary.</p>
+                        </div>
+
+                        <div class="card">
+                            <h1 data-font-size="30">Science Club</h1>
+                            <p>Interested in physics, chemistry, and other branches of Science? 
+                                Join this club to explore the beauty and wonders of Science.</p>
+                        </div>
+                    </div>
+
+                    <div class="clubs-card">        
+                        <div class="card">
+                            <h1 data-font-size="30">YES-O (Youth for Environment)</h1>
+                            <p>Help promote awareness, protection, and conservation of the environment.</p>
+                        </div>
+
+                        <div class="card">
+                            <h1 data-font-size="30">The Shield</h1>
+                            <p>This is the official student publication of St. Joseph College - Olongapo Inc.</p>
+                            <a class="hyperlink" href="https://facebook.com/sjctheshieldofficial/posts/pfbid02ChH59PkeTzEJT7EmA8RKTGhzwd4HiBmksGNLWgLUBPNtj7vgieJ4Be8T1MZNpXZ4l">Learn more</a>
+                        </div>
                     </div>
                 </article>
             </section>
 
             <div id="footer">
                 <ul id="links">
-                    <li><h3 class="category-label" id="contact_us">CONTACTS</h3></li>
-                    <li><h3 class="category-label">ADDRESS</h3></li>
-                    <li><h3 class="category-label">SOCIAL MEDIA</h3></li>
+                    <li class="border-right-6">
+                        <h3 class="category-label" id="contact_us">CONTACT US</h3>
+                        <p class="footer-content">Telephone No: 047 222-339</p>
+                    </li>
+
+                    <li class="border-right-6">
+                        <h3 class="category-label">ADDRESS</h3>
+                        <p class="footer-content">18th cor. Canda street, <br>East Bajac-Bajac, Olongapo City</p>
+                    </li>
+
+                    <li>
+                        <h3 class="category-label">SOCIAL MEDIA</h3>
+                        <a href="https://www.facebook.com/sjcojhs"><img src="assets/facebook.svg" width="32" height="auto" /></a>
+                    </li>
                 </ul>
             </div>
+
+            <div class="copyright">Copyright © 2023 SJCO. All Rights Reserved.</div>
         </main>
 
         <!--Optimizes the webpage and adds functionality to elements.-->

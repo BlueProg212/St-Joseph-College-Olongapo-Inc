@@ -1,0 +1,20 @@
+h1#title {
+    font-size: 20px!important;
+}
+
+#tagline {
+    font-size: 10px!important;
+}
+
+a#navbar_link_dropdown {
+    float: right;
+    display: block!important;
+}
+
+a.navbar-link {
+    display: none!important;
+}
+
+.brand.name {
+    transform: translateY(6px);
+}

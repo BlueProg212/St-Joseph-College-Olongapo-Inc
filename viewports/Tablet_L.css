@@ -1,0 +1,52 @@
+div.header-content > h1#title {
+    font-size: 35px!important;
+}
+
+img.header_logo {
+    display: none!important;
+}
+
+div.header-content > h2#tagline {
+    font-size: 25px!important;
+}
+
+div.header-content {
+    float: none!important;
+    text-align: center;
+}
+
+#vmg_card_container {
+    grid-template-columns: auto!important;
+}
+
+img#history_picture {
+    margin-bottom: 20px;
+}
+
+.history-card {
+    float: none!important;
+    margin: auto;
+}
+
+div.video-wrapper {
+    width: 100%;
+}
+
+.header {
+    padding: 40px!important;
+}
+
+.clubs-card {
+    display: grid;
+    grid-template-columns: auto!important;
+}
+
+ul#links {
+    grid-template-columns: auto!important;
+    text-align: center;
+}
+
+ul#links > .border-right-6 {
+    border-right: none!important;
+    border-bottom: 2px solid #050b11!important;
+}

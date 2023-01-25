@@ -1,63 +1,24 @@
 'use strict'
 
-const fade = document.querySelectorAll(".fade-up");
-const register_btn = document.getElementById("register");
+const fade_up = document.querySelectorAll(".fade-up");
+const slide = document.querySelectorAll(".slide-right");
+const fade_in = document.querySelectorAll(".fade-in");
 
-const play_button = document.querySelectorAll(".playpause");
-const videos = document.getElementsByTagName("video");
+const fonts = document.querySelectorAll("[data-font-size]");
 
-//Create hash database
-let hash_tag_map = new Map();
+window.addEventListener("load", (env) => {
+    setTimeout(() => {
+        fade_up.forEach(e => e.classList.add("loaded-fade-up"));
+        slide.forEach(e => e.classList.add("loaded-slide"));
+        fade_in.forEach(e => e.classList.add("loaded-fade-in"));
+    }, 400);
+})
 
-function initVideos()
-{
-    //Play the video after the interaction
-    for (let i = 0, l = videos.length; i < l; ++i) {
-        const video = videos[i];
-        
-        video.addEventListener("click", e => {
-            //Get pause button
-            const pause_button = video.nextElementSibling;
-
-            if (!video.paused) {
-                pause_button.classList.remove("invisible");
-                video.pause();
-            } else {
-                pause_button.classList.add("invisible");
-                video.play();
-            }
-        });
-    }
-    
-    for (let i = 0, l = play_button.length; i < l; ++i) {
-        play_button[i].addEventListener("click", (env) => {
-            //Get the video
-            const parent_video = play_button[i].previousElementSibling;
-            
-            //Break play button
-            play_button[i].classList.add("invisible");
-            
-            parent_video.paused ? parent_video.play() : parent_video.pause();
-        })
-    }
+for (let i = 0, l = document.images.length; i < l; ++i) {
+    document.images[i].setAttribute("draggable", "false");
 }
 
-function main() {
-    initVideos();
-
-    register_btn.addEventListener("click", (event) => {
-        window.location.hash = '#enroll'
-    })
-    
-    window.addEventListener("load", (env) => {
-        setTimeout(() => {
-            fade.forEach(e => e.classList.add("loaded"))
-        }, 400);  
-    })
-    
-    for (let i = 0; i < document.images.length; ++i) {
-        document.images[i].setAttribute("draggable", "false");
-    }
+for (let i = 0, l = fonts.length; i < l; ++i) {
+    let data = fonts[i].getAttribute("data-font-size");
+    fonts[i].style = `font-size: ${data}px`;
 }
-
-main();
