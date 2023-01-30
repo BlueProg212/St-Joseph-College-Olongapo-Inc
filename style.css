@@ -46,6 +46,7 @@
 
 html {
     scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
 
 :target {
@@ -213,7 +214,7 @@ section#about_us > article {
     opacity: 0;
 }
 
-.slide-right {
+.slide {
     transform: translateX(-400px);
     opacity: 0;
 }

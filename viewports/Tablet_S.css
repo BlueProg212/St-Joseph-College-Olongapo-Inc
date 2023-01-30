@@ -1,3 +1,11 @@
 img.brand.logo {
     display: none!important;
 }
+
+h1#title {
+    font-size: 5px!important;
+}
+
+#clubs {
+  display: none;
+}
